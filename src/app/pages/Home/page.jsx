@@ -50,7 +50,7 @@ export default function Home() {
       >
         Login
       </button>
-      <Link href="/components/signup">
+      <Link href="/signup">
         <button
           className={
             isActive
