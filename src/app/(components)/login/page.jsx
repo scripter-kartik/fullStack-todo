@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Login() {
+  const router = useRouter();
   const [message, setMessage] = useState("");
   const [formData, setFormData] = useState({
     email: "",
@@ -29,11 +31,9 @@ export default function Login() {
       console.log("Login Response:", data);
 
       if (res.ok && data.success) {
-        // Optionally store the token in localStorage
         localStorage.setItem("token", data.token);
         setMessage("Login successful!");
-        // You can also redirect the user here, e.g. using Next.js router
-        // router.push("/dashboard");
+        router.push("/Dashboard");
       } else {
         setMessage(`Error: ${data.message || "Login failed"}`);
       }
@@ -42,7 +42,6 @@ export default function Login() {
       console.error("Login error:", error);
     }
   };
-
   return (
     <div className="flex justify-center items-center h-screen">
       <form

@@ -1,4 +1,4 @@
-import Home from "./pages/Home/page.jsx";
+import Home from "./(pages)/Home/page.jsx";
 
 export default function Page() {
   return (
