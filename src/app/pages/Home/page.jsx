@@ -41,21 +41,23 @@ export default function Home() {
       >
         To Do App
       </h1>
-      <button
-        className={
-          isActive
-            ? "bg-teal-600 ml-150 w-25 h-15 text-2xl font-mono rounded-4xl p-2 my-[26px]"
-            : "bg-teal-600 ml-150 w-25 h-15 text-2xl font-mono rounded-4xl p-2"
-        }
-      >
-        Login
-      </button>
+      <Link href="/login">
+        <button
+          className={
+            isActive
+              ? "bg-teal-600 ml-130 w-30 h-15 text-2xl font-mono rounded-4xl p-2 my-[26px]"
+              : "bg-teal-600 ml-130 w-30 h-15 text-2xl font-mono rounded-4xl p-2"
+          }
+        >
+          Login
+        </button>
+      </Link>
       <Link href="/signup">
         <button
           className={
             isActive
-              ? "bg-teal-600 ml-10 w-25 h-15 text-2xl font-mono rounded-4xl p-2 my-[26px]"
-              : "bg-teal-600 ml-10 w-25 h-15 text-2xl font-mono rounded-4xl p-2"
+              ? "bg-teal-600 ml-10 w-30 h-15 text-2xl font-mono rounded-4xl p-2 my-[26px]"
+              : "bg-teal-600 ml-10 w-30 h-15 text-2xl font-mono rounded-4xl p-2"
           }
         >
           Signup
